@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'appbold';
+    src: url(assets/fonts/YandexSansDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'applight';
+    src: url(assets/fonts/YandexSansDisplay-Light.ttf);
+}
+
+@font-face {
+    font-family: 'appregular';
+    src: url(assets/fonts/YandexSansDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'appmedium';
+    src: url(assets/fonts/YandexSansText-Medium.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'appregular';
+}
