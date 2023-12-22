@@ -1,0 +1,7 @@
+#tv {
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    clip-path: ellipse(79% 85% at 93% 83%);
+}

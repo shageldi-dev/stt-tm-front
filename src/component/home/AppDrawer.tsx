@@ -23,6 +23,9 @@ const AppDrawer: React.FC = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          position: "absolute",
+          width: "95%",
+          zIndex: "2",
         }}
       >
         <Button

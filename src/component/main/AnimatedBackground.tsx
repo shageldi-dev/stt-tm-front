@@ -24,6 +24,7 @@ const AnimatedBackground = (props: LayoutProps) => {
     >
       <Lottie
         options={defaultOptions}
+        speed={0.4}
         isClickToPauseDisabled={true}
         style={{
           width: "100%",
