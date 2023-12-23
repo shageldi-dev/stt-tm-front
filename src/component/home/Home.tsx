@@ -34,16 +34,34 @@ const Home = () => {
   return (
     <div style={{ width: "100%" }}>
       <AnimatedBackground>
-        <AppDrawer />
-        <div
-          style={{ width: "100%", minHeight: "100vh", position: "absolute" }}
-        >
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<MainScreen />} />
-              <Route
-                path="/service"
-                element={
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div
+                  style={{
+                    width: "100%",
+                    minHeight: "100vh",
+                    position: "absolute",
+                  }}
+                >
+                  <AppDrawer />
+                  <MainScreen />
+                </div>
+              }
+            />
+            <Route
+              path="/service"
+              element={
+                <div
+                  style={{
+                    width: "100%",
+                    minHeight: "100vh",
+                    position: "absolute",
+                  }}
+                >
+                  <AppDrawer />
                   <div style={{ display: "flex", width: "100%" }}>
                     <div
                       style={{
@@ -133,11 +151,11 @@ const Home = () => {
                       </ActionContainer>
                     </div>
                   </div>
-                }
-              />
-            </Routes>
-          </BrowserRouter>
-        </div>
+                </div>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
       </AnimatedBackground>
     </div>
   );

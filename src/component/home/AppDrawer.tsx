@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Button, Drawer } from "antd";
+import { Button, Drawer, Typography } from "antd";
 import { LoginOutlined, MenuOutlined } from "@ant-design/icons";
 import SelectLanguage from "./SelectLanguage";
 import DrawerContent from "./DrawerContent";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const AppDrawer: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const showDrawer = () => {
     setOpen(true);
@@ -33,6 +36,29 @@ const AppDrawer: React.FC = () => {
           type="primary"
           onClick={showDrawer}
         ></Button>
+        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+          <Button type="text" onClick={() => navigate("/")}>
+            <Typography
+              style={{
+                textDecoration:
+                  location.pathname === "/" ? "underline" : "none",
+              }}
+            >
+              Home
+            </Typography>
+          </Button>
+          <Button type="text" onClick={() => navigate("/service")}>
+            <Typography
+              style={{
+                textDecoration:
+                  location.pathname === "/service" ? "underline" : "none",
+              }}
+            >
+              Service
+            </Typography>
+          </Button>
+          <Button type="text">Logs</Button>
+        </div>
         <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
           <Button icon={<LoginOutlined />}>Login</Button>
           <SelectLanguage />
